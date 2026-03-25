@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Play Zone | Daniel I. Copeland, MD, MSc</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container header-inner">
+        <h1>Daniel I. Copeland, MD, MSc</h1>
+        <div class="subtitle">Play Zone</div>
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="research.html">Research</a>
+          <a href="publications.html">Publications</a>
+          <a href="cv.html">CV</a>
+          <a class="active" href="practice.html">Play Zone</a>
+          <a href="personal.html">Personal</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section>
+        <h2>A Place Where I Can Share Some of My Interests</h2>
+        <p>
+          Play Zone is a space for brief interactive demonstrations connected to attention,
+          regulation, and cognitive training.
+        </p>
+      </section>
+
+      <section class="practice-module" aria-labelledby="box-breathing-title">
+        <h2 id="box-breathing-title">Box Breathing</h2>
+        <p>
+          This module provides a brief demonstration of box breathing (4-4-4-4) for attention and
+          self-regulation. It is designed as a simple, structured pacing tool that can be used for
+          short practice intervals.
+        </p>
+        <p class="practice-note">Educational demonstration - not medical treatment.</p>
+
+        <div class="breathing-shell">
+          <div class="breathing-square" id="breathingSquare" data-phase="inhale" aria-hidden="true">
+            <span class="edge edge-top"></span>
+            <span class="edge edge-right"></span>
+            <span class="edge edge-bottom"></span>
+            <span class="edge edge-left"></span>
+            <span class="breathing-indicator" id="breathingIndicator"></span>
+          </div>
+        </div>
+
+        <div class="breathing-status" aria-live="polite">
+          <p class="phase-label" id="phaseLabel">Ready</p>
+          <p class="phase-countdown">Phase: <span id="phaseCountdown">4</span></p>
+          <p class="session-countdown">Session remaining: <span id="sessionCountdown">1:00</span></p>
+        </div>
+
+        <div class="practice-controls" role="group" aria-label="Breathing controls">
+          <button type="button" id="startBtn">Start</button>
+          <button type="button" id="pauseBtn">Pause</button>
+          <button type="button" id="resetBtn">Reset</button>
+        </div>
+
+        <div class="duration-picker">
+          <label for="durationSelect">Session length:</label>
+          <select id="durationSelect" name="duration">
+            <option value="60" selected>1 min</option>
+            <option value="120">2 min</option>
+            <option value="300">5 min</option>
+          </select>
+        </div>
+
+        <p id="audioHint" class="audio-hint" hidden>Tap to enable audio.</p>
+      </section>
+
+      <section class="chess-daily" aria-labelledby="chess-daily-title">
+        <h2 id="chess-daily-title">Chess Puzzle of the Day</h2>
+        <p>
+          This module offers a brief executive-function and pattern-recognition exercise through
+          the Chess.com Daily Puzzle. It can be used as a short attention and planning practice
+          between clinical or research tasks.
+        </p>
+        <p>
+          Chess.com Daily Puzzle difficulty generally starts easiest on Monday and increases
+          through Sunday (hardest).
+        </p>
+
+        <div class="chess-module" id="chessModule">
+          <p id="chessLoading" class="chess-loading">Loading today's puzzle...</p>
+
+          <div id="chessContent" hidden>
+            <p class="chess-title" id="chessTitle">Chess.com Daily Puzzle</p>
+            <p class="chess-date" id="chessDate"></p>
+            <p>
+              <a id="chessLink" href="https://www.chess.com/daily-puzzle" target="_blank" rel="noopener noreferrer">Solve on Chess.com</a>
+            </p>
+            <div class="chess-board-wrap" id="chessBoardWrap"></div>
+          </div>
+
+          <p id="chessError" class="chess-error" hidden>
+            Could not load today's puzzle. Open on
+            <a href="https://www.chess.com/daily-puzzle" target="_blank" rel="noopener noreferrer">Chess.com instead.</a>
+          </p>
+
+          <div class="practice-controls">
+            <button type="button" id="refreshPuzzleBtn">Refresh</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container site-footer">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <p>Daniel I. Copeland, MD, MSc</p>
+            <p>Institute for Medical Engineering and Science</p>
+            <p>Massachusetts Institute of Technology</p>
+            <p>Cambridge, MA</p>
+          </div>
+          <div class="footer-col footer-right">
+            <p>dcope@mit.edu</p>
+            <p><a href="https://www.linkedin.com/in/danielicopeland/" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
+            <p><a href="https://scholar.google.com/citations?user=MTL6aYAAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a></p>
+            <p><a href="https://orcid.org/my-orcid?orcid=0009-0000-2799-4146" target="_blank" rel="noopener noreferrer">ORCID</a></p>
+            <p><a href="https://www.corepoweryoga.com/content/teachers/f6582496-f638-4979-ba64-a95693bedbef" target="_blank" rel="noopener noreferrer">CorePower Teacher Profile</a></p>
+          </div>
+        </div>
+        <p class="footer-bottom">&copy; 2026 Daniel I. Copeland | Last updated: Feb 2026</p>
+      </div>
+    </footer>
+
+    <script src="practice.js" defer></script>
+    <script src="practice_chess.js" defer></script>
+  </body>
+</html>
