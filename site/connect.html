@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Research | Daniel I. Copeland, MD, MSc</title>
+    <title>Connect | Daniel I. Copeland, MD, MSc</title>
     <link rel="icon" type="image/png" href="images/favicon.png" />
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -11,13 +11,13 @@
     <header>
       <div class="container header-inner">
         <h1>Daniel I. Copeland, MD, MSc</h1>
-        <div class="subtitle">Research</div>
+        <div class="subtitle">Connect</div>
         <nav>
           <a href="index.html">Home</a>
-          <a class="active" href="research.html">Research</a>
+          <a href="research.html">Research</a>
           <a href="publications.html">Publications</a>
           <a href="cv.html">CV</a>
-          <a href="connect.html">Connect</a>
+          <a class="active" href="connect.html">Connect</a>
           <a href="practice.html">Play Zone</a>
           <a href="personal.html">Personal</a>
         </nav>
@@ -25,30 +25,41 @@
     </header>
 
     <main class="container">
-      <section class="research-layout">
-        <div class="research-text">
-          <h2>Current Focus</h2>
-          <ul>
-            <li>Mind-body and non-pharmacologic treatments for depression.</li>
-            <li>Clinical psychiatry and digital phenotyping approaches.</li>
-            <li>Behavioral interventions informed by wearable and mobile data.</li>
-            <li>Translational work bridging computational methods and patient care.</li>
-          </ul>
+      <section>
+        <h2>Connect</h2>
+        <p>
+          I welcome research collaboration inquiries, speaking invitations, and clinical research
+          partnerships. Use the form below, or email me directly at
+          <a href="mailto:daniel.i.copeland901@gmail.com">daniel.i.copeland901@gmail.com</a>.
+        </p>
+      </section>
 
-          <h2>Research Approach</h2>
-          <p>
-            The core objective is to develop practical, evidence-based tools that improve mental
-            health assessment and treatment in real-world settings.
+      <section>
+        <form class="connect-form" name="connect" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="connect" />
+          <p class="hidden-field">
+            <label>Do not fill this out: <input name="bot-field" /></label>
           </p>
-        </div>
-        <div>
-          <img
-            class="content-image research-image"
-            src="images/headstand.jpg"
-            alt="Daniel in a yoga headstand"
-          />
-          <p class="image-caption">MIT E25-131 Motion Capture Suite</p>
-        </div>
+
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" autocomplete="name" required />
+
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" required />
+
+          <label for="topic">Topic</label>
+          <select id="topic" name="topic">
+            <option value="Research collaboration">Research collaboration</option>
+            <option value="Speaking invitation">Speaking invitation</option>
+            <option value="Clinical research partnership">Clinical research partnership</option>
+            <option value="Other">Other</option>
+          </select>
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="7" required></textarea>
+
+          <button type="submit">Send inquiry</button>
+        </form>
       </section>
     </main>
 

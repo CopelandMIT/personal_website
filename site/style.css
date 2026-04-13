@@ -201,6 +201,55 @@ main.container > section.research-layout .research-image {
   font-size: 0.9rem;
 }
 
+.connect-form {
+  display: grid;
+  gap: 0.7rem;
+}
+
+.connect-form label {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.connect-form input,
+.connect-form select,
+.connect-form textarea {
+  width: 100%;
+  border: 1px solid var(--rule);
+  background: #fff;
+  color: var(--text);
+  border-radius: 5px;
+  padding: 0.48rem 0.55rem;
+  font: inherit;
+}
+
+.connect-form textarea {
+  resize: vertical;
+}
+
+.connect-form button {
+  justify-self: start;
+  border: 1px solid var(--accent);
+  background: transparent;
+  color: var(--accent);
+  border-radius: 999px;
+  padding: 0.38rem 0.88rem;
+  font: inherit;
+  cursor: pointer;
+}
+
+.connect-form input:focus,
+.connect-form select:focus,
+.connect-form textarea:focus,
+.connect-form button:focus-visible {
+  outline: 2px solid #9cafaa;
+  outline-offset: 2px;
+}
+
+.hidden-field {
+  display: none;
+}
+
 .focus-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
